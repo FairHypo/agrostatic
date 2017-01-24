@@ -1,6 +1,6 @@
 <?php namespace Fairhypo\Agrostatic;
 
-class Agrostatic
+class Agro
 {
     public function getStaticPath( $identifier = null, $width = null, $type = null )
     {

@@ -20,14 +20,14 @@ class AgrostaticServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
+        $this->publishes([__DIR__ . '/../config/' => config_path() . "/"], 'config');
     }
 
     public function register()
     {
-        $this->app->bind('agrostatic', function($app)
+        $this->app->bind('Agro', function($app)
         {
-            return new Agrostatic();
+            return new Agro();
         });
     }
 }
