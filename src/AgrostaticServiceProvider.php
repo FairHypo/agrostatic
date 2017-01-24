@@ -25,10 +25,9 @@ class AgrostaticServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->app['agrostatic'] = $this->app->share(function(){
-
-            return new Agrostatic;
-
+        $this->app->bind('agrostatic', function($app)
+        {
+            return new Agrostatic();
         });
     }
 }
