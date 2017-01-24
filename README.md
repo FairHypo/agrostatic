@@ -1,17 +1,63 @@
-# agrostatic
+composer require fairhypo/agrostatic
+================
+
 Library for Agro24 project to get some methods with static files.
 
-Docs in process...
 
-To install use:
-"$ composer require fairhypo/agrostatic"
 
-In config/app.php add:
-"Fairhypo\Agrostatic\AgrostaticServiceProvider::class,"
 
-Use method getStaticPath() with inputs:
+## Installation
 
-getStaticPath(123); - just integer id = 123
+Pull this package in through Composer.
 
-$user = User::find(123);
-getStaticPath($user, 600); - model object and optional width = 600
+```js
+
+    {
+        "require": {
+            "fairhypo/agrostatic": "^1.0"
+        }
+    }
+
+```
+
+
+### Laravel 5.* Integration
+
+Add the service provider to your `config/app.php` file:
+
+```php
+
+    'providers'     => array(
+
+        //...
+        Fairhypo\Agrostatic\AgrostaticServiceProvider::class,
+
+    ),
+
+```
+
+
+## Usage
+
+### Using Agrostatic methods
+
+
+
+| Method                |         Input         | Description                                                       |
+|-----------------------|-----------------------|-------------------------------------------------------------------|
+| getStaticPath()       |  $identifier, $width  | Get path of photo by id or by related model                       |
+
+
+
+## License
+
+This template is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
+
+
+
+## Contact
+
+Yuriy Maslov (developer)
+
+- Email: yuriy.maslof@gmail.com
